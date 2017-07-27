@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <title>Course Schedule</title>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -10,18 +9,17 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="profile.css">
   <link rel="stylesheet" href="jquery.datetimepicker.css">
-
 </head>
 
 <body>
 
   <div class="container">
 
-    <h2>Date</h2>
+    <h4>Date</h4>
     <input id="datetimepicker" type="text" value="date">
 
 
-    <h2>Course</h2>
+    <h4>Course</h4>
     <select id="course">
       <option value="Algebra" > Algebra </option>
       <option value="English 1A"> English 1A </option>
@@ -30,19 +28,27 @@
       <option value="Social Science"> Social Science </option>
     </select>
 
-    <h2>Campus</h2>
+    <h4>Campus</h4>
     <select id="location">
     <option value="Auburn"> Auburn </option>
+    <option value="Folsom"> Folsom </option>
     <option value="Roseville"> Roseville </option>
     <option value="Sacramento"> Sacramento </option>
     <option value="West Sacramento"> West Sacramento </option>
     </select>
 
 
-    <h2>Instructor</h2>
+    <h4>Instructor</h4>
+    <select id="courseDirector">
+    <option value="Andrew"> Andrew </option>
+    <option value="Chris"> Chris </option>
+    <option value="Jeff"> Jeff </option>
+    <option value="Kevin"> Kevin </option>
+    <option value="Steve"> Steve </option>
+    </select>
 
-    <label for="cd-instructor-entry"></label>
-    <input type="text" name="courseDirector" id="courseDirector" placeholder="Instructor">
+    <!--<label for="cd-instructor-entry"></label>
+    <input type="text" name="courseDirector" id="courseDirector" placeholder="Instructor"> -->
 
     <!--<label for="assist1-entry">Assist 1</label>
     <input type="text" name="assist1" id="assist1" placeholder="Assist">
@@ -61,7 +67,6 @@
   </div>
   <div class="container">
     <div class="calendar">
-
     </div>
   </div>
 
