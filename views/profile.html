@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
   <title>Course Schedule</title>
 
@@ -25,32 +23,36 @@
 
     <h2>Course</h2>
     <select id="course">
-      <option value="ACLS" > ACLS </option>
-      <option value="PALS"> PALS </option>
-      <option value="BLS"> BLS </option>
+      <option value="Algebra" > Algebra </option>
+      <option value="English 1A"> English 1A </option>
+      <option value="English 2A"> English 2A </option>
+      <option value="History"> History </option>
+      <option value="Social Science"> Social Science </option>
     </select>
 
-    <h2>Location</h2>
+    <h2>Campus</h2>
     <select id="location">
+    <option value="Auburn"> Auburn </option>
     <option value="Roseville"> Roseville </option>
-    <option value="West Sac"> West Sac </option>
-    <option value="DGMC"> DGMC </option>
+    <option value="Sacramento"> Sacramento </option>
+    <option value="West Sacramento"> West Sacramento </option>
     </select>
 
 
-    <h2>Instructor List</h2>
+    <h2>Instructor</h2>
 
-    <label for="cd-instructor-entry">Director</label>
-    <input type="text" name="courseDirector" id="courseDirector" placeholder="Course Instructor">
+    <label for="cd-instructor-entry"></label>
+    <input type="text" name="courseDirector" id="courseDirector" placeholder="Instructor">
 
-    <label for="assist1-entry">Assist 1</label>
+    <!--<label for="assist1-entry">Assist 1</label>
     <input type="text" name="assist1" id="assist1" placeholder="Assist">
 
     <label for="assist2-entry">Assist 2</label>
     <input type="text" name="assist2" id="assist2" placeholder="Assist">
 
     <label for="assist3-entry">Assist 3</label>
-    <input type="text" name="assist3" id="assist3" placeholder="Assist">
+    <input type="text" name="assist3" id="assist3" placeholder="Assist"> -->
+
     <input type="hidden" value="<%=user.local.email%>" id="loggedInAs">
     <input id="submit_form" type="submit" value="Submit">
     <hr>
@@ -58,9 +60,9 @@
 
   </div>
   <div class="container">
-  <div class="calendar">
+    <div class="calendar">
 
-  </div>
+    </div>
   </div>
 
 
@@ -110,7 +112,7 @@
             if (user === $('#loggedInAs').val()) {
               var editable =
                 '<button class="del"><span class="glyphicon glyphicon-trash"></span></button>  <button class="update"><span class="glyphicon glyphicon-pencil"></span></button>'
-                
+
 
             } else {
               var editable = 'Posted by other user'
@@ -119,7 +121,10 @@
 
 
             $('.calendar').prepend('<div id="' + value._id + '"><span class="date"> ' + date +
-              '</span> <span class="course"><span class="tab-space"></span> ' + course + '</span> <span class="tab-space"></span>' + location + ' <span class="tab-space"></span> ' + courseDirector + '<span class="tab-space"></span> ' + assist1 + ' ' + assist2 + ' ' + assist3 + '<span class="tab-space"></span>' + editable + '</div><br />'
+              '</span> <span class="course"><span class="tab-space"></span> ' + course +
+              '</span> <span class="tab-space"></span>' + location + ' <span class="tab-space"></span> ' +
+              courseDirector + '<span class="tab-space"></span> ' + '<span class="tab-space"></span>' +
+              editable + '</div><br />'
             );
 
 
